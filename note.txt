@@ -22,3 +22,8 @@ Some suggestions to keep in mind before continuing:
 2. Check to see if the completed pen's settings match yours. The versions may be older but the order of imports should be the same and the settings like the JS Preprocessor should match. When the lecture video was recorded the Preprocessor setting was not required. Do not set the JS Preprocessor to blank to match the video.
 
 3. Many students have had browser extensions or settings that are blocking the CDN's from working to load the libraries in CodePen. Please make sure to test your pen in private browsing mode with all extensions disabled.
+
+
+=====
+
+

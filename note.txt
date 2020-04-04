@@ -96,3 +96,15 @@ knows how to take a component and make it show up in the DOM
 
 inside do npx create-react-app nameApp have babel, webpack, and dev server
 behind the scenes libraries that you dont have to setup to properly write our application
+
+
+=====
+
+
+PROJECT DIRECTORY
+src : Folder where we put all the source code we srite
+public : Folder that stores static files, like images
+node_modules : Folder that contains all of our project dependencies
+package.json : Records our project dependencies and configures our project
+package-lock.json : Records the exact version of package that we install
+readme.md : instruction on how to use this project

@@ -4,11 +4,25 @@ import './index.css';
 // import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
+function getBtnText() {
+  return 'Click on me!';
+}
+
 // Create a react component
 const App = function () {
-  return <div>
-    Hi, there!
-  </div>
+  const labelText = 'Name : ';
+
+  return (
+    <div>
+      <label for="name" className="label">
+        {labelText}
+      </label>
+      <input id="name" type="text" />
+      <button style={{ backgroundColor: 'blue', color: 'white' }}>
+        {getBtnText()}
+      </button>
+    </div>
+  )
 };
 
 ReactDOM.render(

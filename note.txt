@@ -108,3 +108,9 @@ node_modules : Folder that contains all of our project dependencies
 package.json : Records our project dependencies and configures our project
 package-lock.json : Records the exact version of package that we install
 readme.md : instruction on how to use this project
+
+
+=====
+
+
+Component on React is Class or Function that Produce HTML to show the user and handles feedback from the user

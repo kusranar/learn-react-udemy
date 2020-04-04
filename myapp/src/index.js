@@ -14,7 +14,7 @@ const App = function () {
 
   return (
     <div>
-      <label for="name" className="label">
+      <label htmlFor="name" className="label">
         {labelText}
       </label>
       <input id="name" type="text" />

@@ -114,3 +114,9 @@ readme.md : instruction on how to use this project
 
 
 Component on React is Class or Function that Produce HTML to show the user and handles feedback from the user
+
+
+=====
+
+
+babeljs.io for showing how jsx compiled

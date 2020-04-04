@@ -76,6 +76,8 @@ ReactDOM.render(
 
 
 =====
+
+
 what is React?
 React by itself is a single javascript library, react ultimate purpose is to show content (HTML) to users and handle user interaction
 
@@ -87,3 +89,10 @@ React
 knows what a component is and how to make components work together
 ReactDOM
 knows how to take a component and make it show up in the DOM
+
+
+=====
+
+
+inside do npx create-react-app nameApp have babel, webpack, and dev server
+behind the scenes libraries that you dont have to setup to properly write our application

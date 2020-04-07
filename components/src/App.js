@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import faker from 'faker';
+// import logo from './logo.svg';
 import './App.css';
+import Comment from './components/Comment';
+
+const listComment = [
+  {
+    name: faker.name.findName(),
+    image: faker.image.avatar(),
+    comment: faker.random.words()
+  },
+  {
+    name: faker.name.findName(),
+    image: faker.image.avatar(),
+    comment: faker.random.words()
+  },
+  {
+    name: faker.name.findName(),
+    image: faker.image.avatar(),
+    comment: faker.random.words()
+  }
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ui container comments">
+      {listComment.map((comment, i) => <Comment name={comment.name} image={comment.image} comment={comment.comment} />)}
     </div>
   );
 }

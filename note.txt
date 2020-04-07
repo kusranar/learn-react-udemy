@@ -120,3 +120,15 @@ Component on React is Class or Function that Produce HTML to show the user and h
 
 
 babeljs.io for showing how jsx compiled
+
+
+=====
+
+
+npm install --save faker (save to local project)
+
+
+=====
+
+
+props is system for passing data from a parent component to a child component, and the goal is to customize or configure a child component

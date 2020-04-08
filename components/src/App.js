@@ -3,6 +3,7 @@ import faker from 'faker';
 // import logo from './logo.svg';
 import './App.css';
 import Comment from './components/Comment';
+import ApprovalCard from './components/ApprovalCard';
 
 const listComment = [
   {
@@ -25,7 +26,11 @@ const listComment = [
 function App() {
   return (
     <div className="ui container comments">
-      {listComment.map((comment, i) => <Comment name={comment.name} image={comment.image} comment={comment.comment} />)}
+      {listComment.map((comment, i) =>
+        <ApprovalCard>
+          <Comment name={comment.name} image={comment.image} comment={comment.comment} />
+        </ApprovalCard>
+      )}
     </div>
   );
 }

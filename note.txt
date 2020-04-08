@@ -132,3 +132,13 @@ npm install --save faker (save to local project)
 
 
 props is system for passing data from a parent component to a child component, and the goal is to customize or configure a child component
+
+
+=====
+
+
+functional component : good for simple content
+class component : good for just about everything else
+  were basically going to say are I going to kind of cheap out here, im going to take an easy out, im going to essetially tell you if youre not creating simple content, you probably want to use a class.
+  so if you have any complex logic if you have anything that needs to respond to user input if you have anything that needs to make network request anything in that regard chances are youre going to want
+  to make a class based component instead.

@@ -148,3 +148,42 @@ class component : good for just about everything else
 
 
 developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+
+
+=====
+
+
+Rules of Class Component
+- must be a javascript class
+- must extends(sub class) React.Component
+- must define a 'render' method that returns some amount of JSX
+
+
+=====
+
+
+Rules of States
+- only useable with class components, technically can be used with functional components using the hooks system (thing to discuss letter)
+- you will confused props with state
+- State is a javascript object that contains data relevant to a component
+- updating state on a component causes the component to (almost) instantly rerender
+- state must be initialized when a component is created
+- state can only be updated using the function setState();
+
+
+=====
+
+
+constructor() is the first function going to be called any time an instance of this class is created.
+  and its more of a function that belongs to the javascript language itself as opposed to some very react specific thing,
+  specially named function that is particular to the javascript language not specific to react.
+  very good location to initialized our state
+  now when we define the constructor method its going to be automatically called with the props object, is the same props object that we saw previously with our functional component.
+  before do anything else inside this constructor function, we have to go through one litte kind of ceremonial step and i say ceremonial because basically just required of us we have to do this, 
+  we have to call a function called super(props) and we have to pass in the props like so.
+  this base class(React.Component) has a constructor function of its own that goes through some amount of setup or has some code inside of it to set up our real component for us.
+  when we define a constructor function inside of our app class we are essetially overriding or replacing the constructor function that is inside of the reactor component class.
+  but we still want to make sure that all the setup code inside of this things constructor function still gets called.
+  so to make sure that the parents or react components constructor function gets called we call super with props.
+  super is reference to the parent constructor function and that all it is
+  if dont have call super() function very quickly see error

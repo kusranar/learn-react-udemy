@@ -3,13 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lat: null
+    }
+
     navigator.geolocation.getCurrentPosition(
-      (position) => console.log(position),
-      (err) => console.log(err)
+      position => this.setState({ lat: position.coords.latitude }),
+      err => console.log(err)
     )
+  }
+  render() {
     return (
-      <h1>Hi There!</h1>
+      <h1>Latitude : {this.state.lat}</h1>
     );
   }
 }

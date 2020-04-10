@@ -187,3 +187,22 @@ constructor() is the first function going to be called any time an instance of t
   so to make sure that the parents or react components constructor function gets called we call super with props.
   super is reference to the parent constructor function and that all it is
   if dont have call super() function very quickly see error
+
+
+=====
+
+
+component lifesycle
+- constructor (good place to do one-time setup)
+- render (avoid doing anything besides returning JSX)
+  content visible on screen
+- componentDidMount (good place to do data-loading)
+  sit and wait for update
+- componentDidUpdate (good place to do more data-loading when state/props change)
+  sit and wait until this component is not longer shown
+- componentWillUnmount (good place to do cleanup (espesially for non-React stuff))
+
+other lifesycle method (rarely used)
+- shouldComponentUpdate
+- getDrivedStateFromProps
+- getSnapshotBeforeUpdate

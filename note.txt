@@ -206,3 +206,37 @@ other lifesycle method (rarely used)
 - shouldComponentUpdate
 - getDrivedStateFromProps
 - getSnapshotBeforeUpdate
+
+
+=====
+
+
+These represent the stages for the ECMAScript language spec and allow you to use certain features of the language that may or may not be fully supported yet:
+
+https://babeljs.io/docs/en/presets#stage-x-experimental-presets
+
+The TC39 categorizes proposals into the following stages:
+
+Stage 0 - Strawman: just an idea, possible Babel plugin.
+
+Stage 1 - Proposal: this is worth working on.
+
+Stage 2 - Draft: initial spec.
+
+Stage 3 - Candidate: complete spec and initial browser implementations.
+
+Stage 4 - Finished: will be added to the next yearly release.
+
+
+=====
+
+
+latitude > 0
+Northern Hemisphere
+0 : januari
+summer : 3, 4, 5, 6, 7, 8
+
+latitude < 0
+Southern Hemisphere
+0 : januari
+summer : 9, 10, 11, 0, 1, 2

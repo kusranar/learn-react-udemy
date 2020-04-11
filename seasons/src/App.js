@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SeasonDisplay from './SeasonsDisplay';
+import Spinner from './Spinner';
 
 class App extends React.Component {
   state = {
@@ -20,7 +21,7 @@ class App extends React.Component {
   render() {
     if (this.state.loading) {
       return (
-        <h1>loading...</h1>
+        <Spinner message="Please accept location request" />
       );
     }
     return (

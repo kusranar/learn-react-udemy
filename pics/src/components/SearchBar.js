@@ -1,5 +1,4 @@
 import React from 'react';
-import Axios from 'axios';
 
 class SearchBar extends React.Component {
     // use this if function in class not use arrow function

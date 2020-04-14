@@ -240,3 +240,10 @@ latitude < 0
 Southern Hemisphere
 0 : januari
 summer : 9, 10, 11, 0, 1, 2
+
+
+=====
+
+
+i do not want the form to attemp to submit itself and these refresh the page
+i will prevent that behavior by calling events that prevent default like so : event.prevenDefault()

@@ -278,3 +278,62 @@ https://codepen.io/
 
 
 connect it communicates with that provider not through the props system but through a completely different system of comunication inside of react, called the context system
+
+
+=====
+
+
+jsonplaceholder.typicode.com
+
+
+=====
+
+
+redux : the redux library
+react-redux : integration layer between react and redux
+axios : helps us make network request
+redux-thunk : middleware to help us make request in a redux application
+
+middleware are essetially function that are going to slightly change the behavior of our redux store
+so they will add in new capabilities or new features to the redux side of our application
+in these case of redux thunk this is a middleware that is going to help us make network request from the redux app
+in the vast vast majority of redux application you are ever going to work on youre going to make use of a middleware like redux thunk
+
+
+=====
+
+
+Middleware in Redux
+- function that gets called with every action we dispatch
+- Has the abillity to STOP, MODIFY, or otherwise mess around with actions
+- Tons of open source middleware exist
+- most popular use of middleware is for dealing with async actions
+- we are going to use a middleware called 'Redux-Thunk' to solve our async issues
+
+
+=====
+
+
+synchronous action creator -> instantly returns an action with data ready to go
+asynchronous action creator -> takes some amount of time for it to get its data ready to go
+
+action creator -> action -> dispatch -> middleware -> reducers -> state
+
+normal rules :
+- action creators must return action objects
+- actions must have a type property
+- actions can optionally have a payload
+
+rules with redux thunk
+- action creators can return action objects
+or
+- action creators can return functions
+- if an action object gets returned, it must have a type
+- if an action object gets returned, it can optionally have a payload
+
+action creator -> "Action" either an object or function -> dispatch -> middleware
+inside middleware(redux thunk)
+if action return function(redux thunk invoke dispatch, with dispatch and getState arguments) -> wait for our request finish -> request complete, dispatch action manually, new action -> dispatch with object
+if action return object -> reducers
+
+https://github.com/reduxjs/redux-thunk

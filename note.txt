@@ -277,3 +277,4 @@ https://codepen.io/
 =====
 
 
+connect it communicates with that provider not through the props system but through a completely different system of comunication inside of react, called the context system

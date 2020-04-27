@@ -337,3 +337,39 @@ if action return function(redux thunk invoke dispatch, with dispatch and getStat
 if action return object -> reducers
 
 https://github.com/reduxjs/redux-thunk
+
+
+=====
+
+
+rules reducers
+- must return any value besides undefined
+- produces 'state' or data to be used inside of your app using only previuos state and the section (reducers are pure)
+- must not return reach 'out it self' to decide what value of return
+- must not mutate its input 'state' argument
+
+pure reducer we are only ever going to return values that use there its input arguments
+
+mutation
+example : anytime that we change the contents of an array it is referred to as a mutation
+
+string and number -> immutable value
+
+https://github.com/reduxjs/redux
+
+everytime your dispatch an action this code right here is going to be executed (combineReducers, 162)
+
+_memoize lodash
+
+
+=====
+
+
+action fetchPostsAndUser
+fetchPosts going to return the inner function
+we going to make sure we dispatch that things so this inner function is going to show up inside of redux thunk and get invoked with dispatch
+then to make sure that we dont try to do any other logic inside of our action creator until we have successfully fetch that list of posts
+we going to make sure that we put await ketword right here in front of that entire call and that going to make sure that we're not going to progress down to the next line of code right here
+and so we have successfully fetched a list of posts and dispatched the action for it
+now at this point i feel like it would be really valueable to maybe put a debugger statement or a console log inside of this action creator
+and then attempt to call it just make sure we really understand the idea of whats going on here

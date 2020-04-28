@@ -373,3 +373,44 @@ we going to make sure that we put await ketword right here in front of that enti
 and so we have successfully fetched a list of posts and dispatched the action for it
 now at this point i feel like it would be really valueable to maybe put a debugger statement or a console log inside of this action creator
 and then attempt to call it just make sure we really understand the idea of whats going on here
+
+
+=====
+
+
+Streamers Computer
+Open Broadcaster Software (OBS) -> Video Stream + Stream Key -> Real Time Messaging Protocol(RTMP) Server -> Video feed -> viewers browser
+
+
+=====
+
+
+react-router-dom navigation for dom-based apps
+react-router-redux -> bindings between Redux and React Router (not necessary)
+
+
+=====
+
+
+history (keeps track of the address bar in your browser) -> BrowserRouter (listens to history for changes to the URL) -> Route (Visible only when the path matches the current URL)
+only keyword exact at route === exact={true}
+
+user wants to navigate to another page in out app
+user clicks a link tag
+react router prevents the browser from navigating to the new page and fetching new index.html file
+url still changes
+history sees update url, takes url and sends it to BrowserRouter
+BrowserRouter communicates the url to route components
+route components rerender to show new set of components
+
+single page app means that we are only loading up a single HTML document
+by clicking on various link tag but when they navigate around they still are making use of the same document
+we are just showing and hiding different sets of components based upon the url
+
+
+=====
+
+
+Uses everything after TLD (.com .net) or port as the path (Browser Router) -> localhost:3000/page-two
+Uses everything after a # as the path (Hash Router) -> localhost:3000/#/page-two
+doesnt use the url to track navigation (memory router) -> localhost:3000/

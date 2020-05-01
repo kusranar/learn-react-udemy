@@ -414,3 +414,41 @@ we are just showing and hiding different sets of components based upon the url
 Uses everything after TLD (.com .net) or port as the path (Browser Router) -> localhost:3000/page-two
 Uses everything after a # as the path (Hash Router) -> localhost:3000/#/page-two
 doesnt use the url to track navigation (memory router) -> localhost:3000/
+
+
+=====
+
+
+Email/Password Authentication
+we store a record in a database with the users email and Password
+when the user tries to login, we compare email/password with whats stored in db
+a user is 'logged in' when they enter the correct email/password
+
+OAuth Authentication
+user Authentication with outside service provider (Google, Linkedin, Facebook)
+user authorizes our app to access their information
+outside provider tells us about the user
+we are trusting the outside provider to correctly handle indenticaation of a user
+OAuth can be used for (1) user identication in our app and (2) our app making actions on behalf of user
+
+developer.google.com/identity/protocols/googlescopes
+https://developers.google.com/identity/protocols/oauth2/scopes
+
+OAuth for servers
+results in a 'token' that a server can use to make requests on behalf of the user
+usually used when we have an app that needs to access user data when they are not logged in
+difficult to setup because we need to store a lot of info about the user
+
+OAuth for JS Browser apps
+results in a 'token' that a browser app can use to make requests on behalf of the user
+usually used when we have an app that only needs to access user data while they are logged in
+very easy to set up thanks to google js lib to automate flow
+
+(users browser)-> user clicks 'login with google' button -> we use googles js lib to initiate OAuth process -> (google server) googles js lib makes auth request to google -> google displays confirmation screen to user in popup window
+-> user accepts -> popup window closes -> (users browser) google js lib invokes a callback in our React/Redux app -> callback provided with authorization token and profile infor for user
+
+steps for setting up OAuth
+create a new project at console.developers.google.com -> set up an OAuth confirmation screen -> generate an OAuth client id -> install googles api library, intialize it with the OAuth client id
+-> make sure the lib gets called any time the user clicks on the login with google button
+
+gapi documentation

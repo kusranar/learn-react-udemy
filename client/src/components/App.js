@@ -72,7 +72,7 @@ const App = () => {
 
             <BrowserRouter>
                 <Header />
-                {ROUTES.map((route, i) => <Route path={route.path} exact={route.exact} component={route.component} />)}
+                {ROUTES.map((route, i) => <Route key={i} path={route.path} exact={route.exact} component={route.component} />)}
             </BrowserRouter>
         </div>
     )

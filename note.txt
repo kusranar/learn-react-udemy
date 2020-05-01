@@ -452,3 +452,30 @@ create a new project at console.developers.google.com -> set up an OAuth confirm
 -> make sure the lib gets called any time the user clicks on the login with google button
 
 gapi documentation
+
+
+=====
+
+
+https://github.com/zalmoxisus/redux-devtools-extension
+
+localhost:3000?debug_session=<some_string>
+saves all data in redux store between refresher of the page
+
+when you do this redux step tools is going to see that you are trying to start up a debug session
+a debug session is where redux dev tools is going to automatically save all of the data inside of your redux store and persist it across refreshes of your application
+so you'd normally when we refresh our application all the data isnide of a redux store falls away and we lose it entirely
+when you enable this debug session redux step tools is going to make sure that all the data stays around
+one thing i want you to be aware of is that once youre done with a debug session you are going to want to remove that query string URL
+otherwise redux step tools are just going to continously try to throw your previous state into your store and sometimes your really dont want that
+particularly if you change some reduce search or return some other form of data like maybe an array instead of an object
+if you continue running a debug session you'll very quickly start to run into errors because redux devtools is trying to throw data into your stored that is no longer valid
+example: 
+i have two separate debug sessions that are running one where i am logged in the other where i am not logged in.
+so if i wanted to i can now easily go back to the previous debug session like go into a logged underscore in
+and im going to essentially retrieve the previous state that i had.
+no immediately i loaded the page API libraries said oh youre not signed in anymore because i actually had signed out so its going to dispatch the sign out action
+but essentially by creating these different debug sessions i can have these different kind of checkpoints of state inside of my application 
+that again makes it really easy to develop and debug certain features
+remember any time that you are done with the debug session make sure you take off that query string
+otherwise youre going to try to throw some data into your store that you probably dont want to throw in

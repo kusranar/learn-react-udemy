@@ -479,3 +479,11 @@ but essentially by creating these different debug sessions i can have these diff
 that again makes it really easy to develop and debug certain features
 remember any time that you are done with the debug session make sure you take off that query string
 otherwise youre going to try to throw some data into your store that you probably dont want to throw in
+
+
+=====
+
+
+redux-form.com
+
+one of the thing that redux form is going to do for us is manage all of our form data inside of our redux store

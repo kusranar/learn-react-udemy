@@ -487,3 +487,44 @@ otherwise youre going to try to throw some data into your store that you probabl
 redux-form.com
 
 one of the thing that redux form is going to do for us is manage all of our form data inside of our redux store
+
+
+=====
+
+
+npmjs.com/package/json-server
+
+options request right there is because we are making request to a server that is running on a different port
+this is related to cors request error if you are a court enforcement policy if you're ever taken a look at cors errors before
+
+
+=====
+
+internally the browser router creates this history object.
+Remember we spoke about how this history object keeps track of the address in the address bar of your browser up at the top.
+So anytime that address changes the history object is going to communicate the change over to the browser router.
+Now the history object over here is not only about watching the address bar the history object also has the ability to change the address bar as well.
+the fact that this history object is created by the browser router.
+In other words it is kind of challenging for you and I to write code that can get a handle or a reference to that history object.
+
+Internally the browser router creates this history object then any time that the browser router renders some component like let's say PAGE ONE Capone right here the browser router passes that history object as a prop down to your component.
+So inside of any component that gets rendered directly by re-act router it's going to receive this history object.
+
+So remember before we had made a browser router whenever you create a browser router internally that creates an object not just called history it's the browser history object or like the browser flavor of the history object.
+
+So first off history right here the history package was installed automatically with re-act Rotterdam when I've been talking about that history object. 
+It's technically a separate library that re-act Rotterdam depends upon as a dependency.
+
+So anytime that we pass in a prop called history the router is going to attempt to use it instead of its default implementation which is to create its own internal history object
+
+BrowserRouter listens to history for changes to the URL
+browserRouter creates the history object and the fact that the browserrouter maintains that history object is what makes our life all that chanllenging
+So you and I are going to create a history object inside of a dedicated file inside of our project.
+Then any time that you and I want to get access to that history object we're just going to import that file.
+
+
+=====
+
+
+PUT method : update ALL properties of a record
+PATCH method : update SOME properties of a record

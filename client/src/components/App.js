@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter, HashRouter, MemoryRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, HashRouter, MemoryRouter, Router, Route, Link } from 'react-router-dom';
 
+import history from '../history';
 import Header from './Header';
 import StreamCreate from './streams/StreamCreate';
 import StreamDelete from './streams/StreamDelete';
@@ -34,17 +35,17 @@ const ROUTES = [
         exact: true
     },
     {
-        path: "/streams/edit",
+        path: "/streams/edit/:id",
         component: StreamEdit,
         exact: true
     },
     {
-        path: "/streams/delete",
+        path: "/streams/delete/:id",
         component: StreamDelete,
         exact: true
     },
     {
-        path: "/streams/show",
+        path: "/streams/show/:id",
         component: StreamShow,
         exact: true
     }
@@ -70,10 +71,10 @@ const App = () => {
                 <Route path="/page-two" component={PageTwo} />
             </MemoryRouter> */}
 
-            <BrowserRouter>
+            <Router history={history}>
                 <Header />
                 {ROUTES.map((route, i) => <Route key={i} path={route.path} exact={route.exact} component={route.component} />)}
-            </BrowserRouter>
+            </Router>
         </div>
     )
 }

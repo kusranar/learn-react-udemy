@@ -559,3 +559,9 @@ if we want to use context in place of redux
 - we need to be able to get data to any component in our hierarchy
 - we need to be able to separate our view logic from business logic
 - we need to be able to split up business logic (not have a single file with 10000 lines of code)
+
+
+=====
+
+
+First off the only input to this chunk of code that is required to get it working correctly is that resource Propp that is the only input to all this code right here.

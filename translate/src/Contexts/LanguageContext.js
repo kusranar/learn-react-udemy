@@ -1,7 +1,23 @@
 import React from 'react';
 
-const context = React.createContext('english');
+const Context = React.createContext('english');
 
-console.log(context);
+export class LanguageStore extends React.Component {
+    state = {
+        language: 'english'
+    }
 
-export default context
+    onChangeLanguage = language => {
+        this.setState({ language });
+    }
+
+    render() {
+        return (
+            <Context.Provider value={{ ...this.state, action: this.onChangeLanguage }}>
+                {this.props.children}
+            </Context.Provider>
+        );
+    }
+}
+
+export default Context;

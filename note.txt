@@ -550,3 +550,12 @@ button and field reach into context object, see the value form 'this.state.langu
 button and field render appropriate text to the screen
 
 each separate use of LanguageContext creates a new, separate 'pipe' of information
+
+
+=====
+
+
+if we want to use context in place of redux 
+- we need to be able to get data to any component in our hierarchy
+- we need to be able to separate our view logic from business logic
+- we need to be able to split up business logic (not have a single file with 10000 lines of code)

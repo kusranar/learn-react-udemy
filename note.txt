@@ -537,3 +537,16 @@ PATCH method : update SOME properties of a record
 
 
 https://github.com/illuspas/Node-Media-Server#npm-version-recommended
+
+
+=====
+
+
+application loads up in the browser
+we create a context object with a default value of english
+app component gets rendered, creates a Provider that wraps usercreate
+provider updates the value of the context object to 'this.state.language'
+button and field reach into context object, see the value form 'this.state.language'
+button and field render appropriate text to the screen
+
+each separate use of LanguageContext creates a new, separate 'pipe' of information

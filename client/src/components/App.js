@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, HashRouter, MemoryRouter, Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter, HashRouter, MemoryRouter, Router, Route, Link, Switch } from 'react-router-dom';
 
 import history from '../history';
 import Header from './Header';
@@ -45,7 +45,7 @@ const ROUTES = [
         exact: true
     },
     {
-        path: "/streams/show/:id",
+        path: "/streams/:id",
         component: StreamShow,
         exact: true
     }
@@ -73,7 +73,9 @@ const App = () => {
 
             <Router history={history}>
                 <Header />
-                {ROUTES.map((route, i) => <Route key={i} path={route.path} exact={route.exact} component={route.component} />)}
+                <Switch>
+                    {ROUTES.map((route, i) => <Route key={i} path={route.path} exact={route.exact} component={route.component} />)}
+                </Switch>
             </Router>
         </div>
     )

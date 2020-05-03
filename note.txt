@@ -522,9 +522,18 @@ browserRouter creates the history object and the fact that the browserrouter mai
 So you and I are going to create a history object inside of a dedicated file inside of our project.
 Then any time that you and I want to get access to that history object we're just going to import that file.
 
+Switch
+so so switch right here is going to look at all these different routes and it's only going to show one of these given routes for any path that we go to.
+
 
 =====
 
 
 PUT method : update ALL properties of a record
 PATCH method : update SOME properties of a record
+
+
+=====
+
+
+https://github.com/illuspas/Node-Media-Server#npm-version-recommended
